@@ -7,4 +7,4 @@ Made for two week Echo-nest sprint.
 
 By 
 
-** Amanda Lee and Rachel Mathew **
+**Amanda Lee and Rachel Mathew**
