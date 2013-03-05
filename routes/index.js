@@ -14,14 +14,15 @@ exports.index = function(req,res){
 
 exports.play = function(req, res){
 	//Finding information about original
+	console.log(req.body);
+	var title=req.body.dropDownOne;
 	echo('song/search').get({  
-		artist:'2pac',
-		title:'thugz mansion',
+		title: title,
 		bucket:'audio_summary',
 	},function(err,json){
 		var url = json.response.songs[0].audio_summary.analysis_url;
 		var tempo = json.response.songs[0].audio_summary.tempo;
-		res.render('player', { title: 'YAY! Music!' , audioUrl: url, tempo:tempo});
+		res.render('player', { title: 'YAY! Music!' , audioUrl: url, tempo:tempo, song:title, one:req.body.Beats1, two:req.body.Beats2, three:req.body.Beats3, four:req.body.Beats4});
 	}) 
 }  
 
