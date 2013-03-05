@@ -3,30 +3,36 @@ extends layout
 block content
 	h1= title
 	form(name='songOne', action='/playMusic', method='POST')
+		
+		p Song
 		select(name='dropDownOne')
 			option(value='mansion.mp3') Thugz Mansion
 		
+		p Goat
 		select(name='Goat')
 			option(value='Goat') Beats 1, and 5
 			option(value='Goat') Beats 3, and 7
 			option(value='Goat') Every eighth 
 
+		p Kick
 		select(name='kick')
 			option(value='Beat1&5_kick') Beats 1, and 5
 			option(value='Beat3&7_kick') Beat 3, and 7
 			option(value='Eighth_kick') Every eighth
 		
+		p Snare
 		select(name='snare')
 			option(value='Beat1&5_snare') Beats 1, and 5
 			option(value='Beat3&7_snare') Beat 3, and 7
 			option(value='Eighth_snare') Every eighth
 
+		p Hihat
 		select(name='hihat')
 			option(value='Beat1&5_hihat') Beats 1, and 5
 			option(value='Beat3&7__hihat') Beat 3, and 7
 			option(value='Eighth_hihat') Every eighth
 
-
+		p Inception 
 		select(name='inception')
 			option(value='Beat1&5_inception') Beats 1, and 5
 			option(value='Beat3&7__inception') Beat 3, and 7
