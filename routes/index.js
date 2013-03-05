@@ -20,7 +20,8 @@ exports.play = function(req, res){
 		bucket:'audio_summary',
 	},function(err,json){
 		var url = json.response.songs[0].audio_summary.analysis_url;
-		res.render('player', { title: 'yo' , audioUrl: url});
+		var tempo = json.response.songs[0].audio_summary.tempo;
+		res.render('player', { title: 'yo' , audioUrl: url, tempo:tempo});
 	}) 
 }  
 

@@ -61,8 +61,8 @@ $(function () {
     var song = bufferList[3];
 
     // We'll start playing the rhythm 100 milliseconds from "now"
-    var startTime = 0.100;
-    var tempo = 87.804; // BPM (beats per minute)
+    var startTime = 0;
+    var tempo = parseInt($('#tempo').text(),10); // BPM (beats per minute)
     var eighthNoteTime = (60 / tempo) / 2;
     playSound(song,0);
     // Play 2 bars of the following:
