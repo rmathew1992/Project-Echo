@@ -1,4 +1,4 @@
-$(function(){
+$(('play').click(function(){
       console.log('hey')
       window.onload = init;
       var context;
