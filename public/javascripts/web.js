@@ -22,7 +22,10 @@ $(function () {
                   '../sounds/hihat.mp3',
                   '../sounds/snare.mp3',
                   '../sounds/kick.mp3',
-                  '../sounds/mansion.mp3'
+                  '../sounds/mansion.mp3',
+                  '../sounds/Goat.mp3',
+                  '../sounds/inception.mp3'
+
              ],
              finishedLoading
             );
@@ -44,6 +47,12 @@ $(function () {
       var source4 = context.createBufferSource();
       source4.buffer = bufferList[3];
       source4.connect(context.destination);
+      var source5 = context.createBufferSource();
+      source5.buffer = bufferList[4];
+      source5.connect(context.destination);
+      var source6 = context.createBufferSource();
+      source6.buffer = bufferList[5];
+      source6.connect(context.destination);
       RhythmSample.play(bufferList);
   }
 
@@ -59,6 +68,8 @@ $(function () {
     var snare = bufferList[1];
     var hihat = bufferList[0];
     var song = bufferList[3];
+    var Goat = bufferList[4];
+    var inception = bufferList[5];
 
     // We'll start playing the rhythm 100 milliseconds from "now"
     var startTime = 20.5;
@@ -69,16 +80,16 @@ $(function () {
     for (var bar = 0; bar < 200; bar++) {
       var time = startTime + bar * 8 * eighthNoteTime;
       // Play the bass (kick) drum on beats 1, 5
-      //playSound(kick, time);
-      //playSound(kick, time + 4 * eighthNoteTime);
+      playSound(kick, time);
+      playSound(kick, time + 4 * eighthNoteTime);
 
-      // Play the snare drum on beats 3, 7
-      //playSound(snare, time + 2 * eighthNoteTime);
-      //playSound(snare, time + 6 * eighthNoteTime);
+       Play the snare drum on beats 3, 7
+      playSound(Goat, time + 2 * eighthNoteTime);
+      playSound(Goat, time + 6 * eighthNoteTime);
 
       // Play the hi-hat every eighthh note.
       for (var i = 0; i < 8; i+=2) {
-        playSound(snare, time + i * eighthNoteTime);
+        //playSound(snare, time + i * eighthNoteTime);
       }
     }
   };
