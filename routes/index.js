@@ -4,13 +4,6 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
-};
-
-exports.home = function(req,res){
-  res.render('home',{title:'Home'});	
-};
-
-exports.soundtest = function(req,res){
-  res.render('soundtest',{title:'soundtest'});	
-};
+  res.render('index',{title:'yo'})
+  console.log('There are things appearing')
+ };
