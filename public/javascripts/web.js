@@ -1,6 +1,7 @@
 $(function () {
-  $('#composeTweetForm').click('submit', function () {
-  console.log('working')
+  $('#play').click(function () {
+    init();
+    console.log('working');
   })
   
   var url = $('#audioSummary').text();
@@ -9,7 +10,6 @@ $(function () {
     console.log(data);
   });
 
-  window.onload = init;
   var context;
   var bufferLoader;
   var RhythmSample = {
