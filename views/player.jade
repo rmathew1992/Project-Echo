@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1= title
+	div(id='audioSummary', value=audioUrl) #{audioUrl}
+	button(id='play')
+		Play Play!
+
+	a(href='/')
+		input(id='backButton', type='button', value='Back')

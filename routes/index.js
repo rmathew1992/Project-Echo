@@ -8,7 +8,11 @@ var echo = echojs({
   key: "XCVC9ZYTCHJC5TMUI"
 });
 
-exports.index = function(req, res){
+exports.index = function(req,res){
+	res.render('index', {title:'Express'});
+}
+
+exports.play = function(req, res){
 	//Finding information about original
 	echo('song/search').get({  
 		artist:'2pac',
@@ -16,7 +20,7 @@ exports.index = function(req, res){
 		bucket:'audio_summary',
 	},function(err,json){
 		var url = json.response.songs[0].audio_summary.analysis_url;
-		res.render('index', { title: 'yo' , audioUrl: url});
+		res.render('player', { title: 'yo' , audioUrl: url});
 	}) 
 }  
 

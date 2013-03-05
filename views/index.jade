@@ -2,6 +2,15 @@ extends layout
 
 block content
 	h1= title
-	div(id='audioSummary', value=audioUrl) #{audioUrl}
-	button(type='composeTweetForm',id='play')
-		Play Play!
+	form(name='songOne', action='/playMusic', method='POST')
+		select(name='dropDownOne')
+			option(value='mansion.mp3') Thugz Mansion
+		select(name='dropDownTwo')
+			option(value='classical') Classical
+			option(value='opera') Opera
+			option(value='drums') Drums
+			option(value='techno') Techno
+			option(value='break') Breakbeat
+			option(value='dubstep') Dubstep
+			option(value='getiton') Let's Get It On
+		input(class='submitButton', type='submit', value='Submit')
