@@ -9,7 +9,7 @@ var echo = echojs({
 });
 
 exports.index = function(req,res){
-	res.render('index', {title:'Express'});
+	res.render('index', {title:'Mix It Up!'});
 }
 
 exports.play = function(req, res){
@@ -21,7 +21,7 @@ exports.play = function(req, res){
 	},function(err,json){
 		var url = json.response.songs[0].audio_summary.analysis_url;
 		var tempo = json.response.songs[0].audio_summary.tempo;
-		res.render('player', { title: 'yo' , audioUrl: url, tempo:tempo});
+		res.render('player', { title: 'YAY! Music!' , audioUrl: url, tempo:tempo});
 	}) 
 }  
 
